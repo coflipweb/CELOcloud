@@ -62,7 +62,7 @@ contract FileUpload {
             files[msg.sender][index] = files[msg.sender][lastIdx];
             files[msg.sender][lastIdx] = fileToDelete;
             
-            // Remove the last file from the lis
+            // Remove the last file from the list
             files[msg.sender].pop();
 
         emit FileDeleted(fileToDelete.owner, fileToDelete.hash, fileToDelete.name, fileToDelete.description, fileToDelete.location);
