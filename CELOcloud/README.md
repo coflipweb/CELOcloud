@@ -1,4 +1,4 @@
-CELOcloud
+# CELOcloud
 CELOcloud is a decentralized file storage platform built on the Celo blockchain. It allows users to store, share, and access files securely and privately using the CELO token as the native currency.
 
 How it works
