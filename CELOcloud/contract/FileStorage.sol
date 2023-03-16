@@ -67,7 +67,7 @@ contract FileUpload {
         string calldata _name, // Name of the file
         string calldata _description, // Description of the file
         string calldata _location // Location of the file
-    ) public {
+    ) public payable{
 
         require(
             IERC20Token(cUsdTokenAddress).transferFrom(
