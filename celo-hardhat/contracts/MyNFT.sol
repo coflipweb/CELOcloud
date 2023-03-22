@@ -51,4 +51,22 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
     {
         return super.supportsInterface(interfaceId);
     }
+
+   function setTokenURI(uint256 tokenId, string memory uri) public onlyOwner {
+    require(_exists(tokenId), "Token ID does not exist");
+    _setTokenURI(tokenId, uri);
+}
+
+
+    function getTokenCount() public view returns (uint256) {
+        return _tokenIdCounter.current();
+    }
+
+  function transferOwnership(address newOwner) public onlyOwner override {
+    super.transferOwnership(newOwner);
+}
+
+
+
+ 
 }
