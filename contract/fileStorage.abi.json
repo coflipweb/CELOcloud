@@ -44,11 +44,6 @@
 			},
 			{
 				"internalType": "string",
-				"name": "image",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
 				"name": "description",
 				"type": "string"
 			},
@@ -109,11 +104,6 @@
 					},
 					{
 						"internalType": "string",
-						"name": "image",
-						"type": "string"
-					},
-					{
-						"internalType": "string",
 						"name": "description",
 						"type": "string"
 					},
@@ -141,11 +131,6 @@
 			{
 				"internalType": "string",
 				"name": "_name",
-				"type": "string"
-			},
-			{
-				"internalType": "string",
-				"name": "_image",
 				"type": "string"
 			},
 			{
