@@ -1,0 +1,114 @@
+<html>
+<head></head>
+  <meta charset="UTF-8">
+  <title>File Upload</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./web3.min.js"></script>
+  <script src="./fileUpload.js"></script>
+  <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+  crossorigin="anonymous"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body class="bg-gradient-to-r from-gray-100 to-gray-200 px-4 md:px-8 lg:px-16 xl:px-24 font-sans">
+  <!-- navbar  -->
+    <nav class="navbar bg-green-400  navbar-light">
+        <div class="container-fluid flex">
+          <span class="nav-link border rounded-pill bg-light">
+            <span id="balance">0</span>
+            cUSD
+          </span>
+          <h1 class="text-4xl font-bold mb-4 text-white  text-end">CELO cloud</h1>
+        </div>
+      </nav>
+       <div class="alert alert-warning bg-green-400 sticky-top mt-2" role="alert">
+        <span id="notification">⌛ Loading...</span>
+      </div>
+      <main id="marketplace" class="row"></main>
+      </div>
+
+
+<!-- section to turn a file into a hash -->
+ 
+    <div class="container mx-auto px-4 py-8">
+      <div class="mb-4">
+        <label class="block text-gray-700 font-bold mb-2 text-xl" for="file-input">
+          Choose a file to upload
+        </label>
+        <input class="appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="file" id="file-input">
+      </div>
+
+      <div id="hash-container" class="mb-4"></div>
+
+      <!-- section to upload a file -->
+
+      <h2 class="text-2xl font-bold mb-4">Upload a file</h2>
+
+      <form class="">
+        
+        <div class="mb-4 ">
+          <label class="block text-gray-700 font-bold mb-2" for="hash">
+            File hash:
+          </label>
+          <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" type="text" id="hash" name="hash">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="name">
+            File name:
+          </label>
+          <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" type="text" id="name" name="name">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="description">
+            File description:
+          </label>
+          <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" type="text" id="description" name="description">
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="location">
+            File location:
+          </label>
+          <input class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" type="text" id="location" name="location">
+        </div>
+
+        <button id="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+          Upload
+        </button>
+      </form>
+
+      <!-- section to see your uploaded files -->
+
+      <h2 class="text-3xl font-bold my-4">My uploaded files</h2>
+            <p class="mb-4 text-lg">Enter your address to see your files:</p>
+            <div class="mb-4 flex items-center">
+            <input id="files-owner" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md" type="text" placeholder="Enter your address">
+            <a id="search-files" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer text-lg">Search</a>
+            </div>
+
+  
+      <ul id="files-list" class="list-disc pl-4 mb-4"></ul>
+
+      <!-- section to delete a file  -->
+  
+      <div class="mb-8">
+        <label for="delete-index" class="block text-gray-700 font-bold mb-2">Delete Index:</label>
+        <p class="m-2">To delete a file enter the index of the file you want to remove</p>
+        <input type="number" id="delete-index" min="0" class="border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline shadow-md">
+      </div>
+  
+      <button id="delete-file-button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer">Delete File</button>
+  
+    </div>
+</body>
+</html>
+
+  <script src="https://unpkg.com/ethereum-blockies@0.1.1/blockies.min.js"></script>
