@@ -1,6 +1,6 @@
 # Description
 
-smart contract for a decentralized file upload and management system. Users can upload files with metadata, such as file name and description, which are stored on the blockchain. The system uses IPFS to store the actual file data off-chain. Users can retrieve their files and delete them if necessary. This project provides a simple example of how blockchain technology can be used for decentralized file storage and management.
+This project is a decentralized file upload and management system. Users can upload files with metadata, such as file name and description, which are stored on the blockchain. The system uses IPFS to store the actual file data off-chain. Users can retrieve their files and delete them if necessary. This project provides a simple example of how blockchain technology can be used for decentralized file storage and management.
 
 # Demo 
 
